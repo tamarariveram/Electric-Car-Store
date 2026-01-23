@@ -25,7 +25,7 @@ body {
     "contenido"
     "pie-pag";
   grid-template-columns: auto;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto auto auto auto;
 }
 
 header {
@@ -62,14 +62,15 @@ h1 {
   color: var(--secondary-color);
 }
 
-div {
+section {
   grid-area: filtros;
   background-color: var(--bg-color);
-  padding: 15px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  padding: 20px 0px;
 }
 
 h2 {
@@ -83,6 +84,7 @@ select {
   border: 1px solid var(--text-color);
   border-radius: 5px;
   width: 80%;
+  font-family: var(--principal-font);
 }
 
 select:hover {
@@ -91,8 +93,95 @@ select:hover {
 
 main {
   grid-area: contenido;
+  display: grid;
+  grid-column: auto;
+  grid-row: auto;
+  padding: 40px;
+  gap: 20px;
+}
+
+.card{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  height: auto;
+  gap: 20px;
+  border: 1px solid rgb(205, 205, 205);
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card button{
+    padding: 10px 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: var(--principal-font);
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.card button:hover{
+    background-color: var(--secondary-color);
+}
+
+#car-second{
+    display: none;
+}
+
+.pagination{
+    display: inline-flex;
+width: fit-content;
+margin: 0 auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+    
+}
+
+.pagination a{
+    min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  outline: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+
+}
+
+.pagination a:hover{
+    background-color: var(--bg-color);
+    font-weight: 700;
 }
 
 footer {
   grid-area: pie-pag;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
