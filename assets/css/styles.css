@@ -51,7 +51,7 @@ h1 {
   color: var(--tertiary-color);
 }
 
-nav{
+nav {
   display: none;
 }
 
@@ -135,7 +135,7 @@ main {
   border-radius: 10px;
 }
 
-h3{
+h3 {
   text-align: center;
 }
 
@@ -200,7 +200,7 @@ footer {
   color: white;
 }
 
-footer p{
+footer p {
   text-align: center;
 }
 
@@ -220,7 +220,7 @@ footer p{
   color: var(--primary-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   body {
     grid-template-areas:
       "menu filtros"
@@ -229,50 +229,50 @@ footer p{
     grid-template-columns: 20% 1fr;
   }
 
-header{
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 20px;
-  padding: 30px;
-}
-  
-.logo{
-  display: flex;
-  justify-content: center;
-}
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    padding: 30px;
+  }
 
-nav{
-  display: flex;
-}
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
 
-ul{
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  text-align: center;
-  gap: 20px;
-}
+  nav {
+    display: flex;
+  }
 
-ul a{
-  color: white;
-  text-decoration: none;
-}
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    gap: 20px;
+  }
 
-ul a:hover{
-  color: var(--secondary-color);
-  transition: color 0.2s ease-in-out;
-}
+  ul a {
+    color: white;
+    text-decoration: none;
+  }
 
-.fa-bars{
-  display: none;
-}
+  ul a:hover {
+    color: var(--secondary-color);
+    transition: color 0.2s ease-in-out;
+  }
+
+  .fa-bars {
+    display: none;
+  }
 
   .products {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .card img{
+  .card img {
     height: 120px;
   }
 
