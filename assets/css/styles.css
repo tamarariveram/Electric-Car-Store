@@ -24,7 +24,6 @@ body {
     "filtros"
     "contenido"
     "pie-pag";
-  grid-template-columns: auto;
   grid-template-rows: auto auto auto auto;
 }
 
@@ -52,7 +51,7 @@ h1 {
   color: var(--tertiary-color);
 }
 
-.fa-solid {
+.fa-bars {
   font-size: 24px;
   color: var(--bg-color);
   cursor: pointer;
@@ -179,9 +178,48 @@ margin: 0 auto;
 
 footer {
   grid-area: pie-pag;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background-color: var(--secondary-color);
   padding: 20px;
   display: flex;
-  justify-content: center;
+  align-items: center;
   color: white;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.fa-brands{
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.fa-brands:hover{
+    color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+    
+    body{
+        grid-template-areas: 
+        "menu filtros"
+        "menu contenido"
+        "pie-pag contenido";
+        grid-template-columns: auto 1fr;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #car-second{
+        display: flex;
+    }
+
 }
