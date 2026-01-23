@@ -251,12 +251,17 @@ ul{
   flex-direction: column;
   list-style: none;
   text-align: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 ul a{
   color: white;
   text-decoration: none;
+}
+
+ul a:hover{
+  color: var(--secondary-color);
+  transition: color 0.2s ease-in-out;
 }
 
 .fa-bars{
