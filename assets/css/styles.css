@@ -51,13 +51,17 @@ h1 {
   color: var(--tertiary-color);
 }
 
+nav{
+  display: none;
+}
+
 .fa-bars {
   font-size: 24px;
   color: var(--bg-color);
   cursor: pointer;
 }
 
-.fa-solid:hover {
+.fa-bars:hover {
   color: var(--secondary-color);
 }
 
@@ -92,15 +96,21 @@ select:hover {
 
 main {
   grid-area: contenido;
-  display: grid;
-  grid-column: auto;
-  grid-row: auto;
+  display: flex;
+  flex-direction: column;
   padding: 40px;
   gap: 20px;
 }
 
-.card{
-    display: flex;
+.products {
+  display: grid;
+  grid-column: auto;
+  grid-row: auto;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -114,8 +124,8 @@ main {
   transition: box-shadow 0.2s ease;
 }
 
-.card:hover{
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
@@ -125,39 +135,42 @@ main {
   border-radius: 10px;
 }
 
-.card button{
-    padding: 10px 40px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-family: var(--principal-font);
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-    transition: background-color 0.2s ease-in-out;
+h3{
+  text-align: center;
 }
 
-.card button:hover{
-    background-color: var(--secondary-color);
+.card button {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: var(--principal-font);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.2s ease-in-out;
 }
 
-#car-second{
-    display: none;
+.card button:hover {
+  background-color: var(--secondary-color);
 }
 
-.pagination{
-    display: inline-flex;
-width: fit-content;
-margin: 0 auto;
+#car-second {
+  display: none;
+}
+
+.pagination {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 auto;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-    
 }
 
-.pagination a{
-    min-width: 40px;
+.pagination a {
+  min-width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -168,12 +181,11 @@ margin: 0 auto;
   color: var(--primary-color);
   outline: 1px solid #e5e7eb;
   transition: background-color 0.2s ease;
-
 }
 
-.pagination a:hover{
-    background-color: var(--bg-color);
-    font-weight: 700;
+.pagination a:hover {
+  background-color: var(--bg-color);
+  font-weight: 700;
 }
 
 footer {
@@ -188,38 +200,78 @@ footer {
   color: white;
 }
 
-.redes{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+footer p{
+  text-align: center;
 }
 
-.fa-brands{
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-.fa-brands:hover{
-    color: var(--primary-color);
+.fa-brands {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.fa-brands:hover {
+  color: var(--primary-color);
 }
 
 @media screen and (min-width: 768px) {
-    
-    body{
-        grid-template-areas: 
-        "menu filtros"
-        "menu contenido"
-        "pie-pag contenido";
-        grid-template-columns: auto 1fr;
-    }
+  body {
+    grid-template-areas:
+      "menu filtros"
+      "menu contenido"
+      "pie-pag contenido";
+    grid-template-columns: 20% 1fr;
+  }
 
-    main{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  padding: 30px;
+}
+  
+.logo{
+  display: flex;
+  justify-content: center;
+}
 
-    #car-second{
-        display: flex;
-    }
+nav{
+  display: flex;
+}
 
+ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  gap: 10px;
+}
+
+ul a{
+  color: white;
+  text-decoration: none;
+}
+
+.fa-bars{
+  display: none;
+}
+
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .card img{
+    height: 120px;
+  }
+
+  #car-second {
+    display: flex;
+  }
 }
